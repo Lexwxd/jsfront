@@ -1,58 +1,104 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div class="firstcard">
+      <div class="text">
+        <h1>Сердюков Алексей Иванович</h1>
+        <p>БСБО-05-19</p>
+      </div>
+      <img alt="Vue logo" src="../assets/Paul.jpg" />
+      <p class="text">
+        Это не военное преступление, если тебе было весело
+      </p>
+            <!-- <p class="text">
+        Мы являемся 6-й танковой армией потому, что у нас в армии всего 6 танков
+      </p> -->
+    </div>
+    <div class="secondcard">
+      <form method="get">
+      <div class="textar">
+        <p>Ваше имя</p>
+        <input required id="login"/>
+        <p>Почта</p>
+        <input required id="password"/>
+        <p>Сопроводительное письмо</p>
+        <textarea></textarea>
+      </div>
+      <div>
+        <button class="Butt">Кто прочитал тот сдохнет</button>
+      </div>
+      </form> 
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.hello {
+  margin: 0px 10px;
+
+  display: flex;
+  flex-direction: row;
+  border: 4px double black; /* Параметры границы */
+  background: #fc3; /* Цвет фона */
+  padding: 10px; /* Поля вокруг текста */
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.firstcard {
+  margin: 0px 100px;
+  max-width: 40%;
+  margin-left: auto;
+  margin-left: 1.2em;
+  border-radius: 25px;
+  box-shadow: 0 0 10px aqua;
+  background: rgb(27, 20, 20); /* Цвет фона */
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.secondcard {
+  float: left;
+  margin: 0px 100px;
+  max-width: 40%;
+  order: 1;
+  margin-right: auto;
+  margin-right: 1.2em;
+  border-radius: 25px;
+  box-shadow: 0 0 10px aqua;
+  background: rgb(102, 27, 27); /* Цвет фона */
 }
-a {
+.textar {
+  clear: both;
+  color: #13e21d;
+  border: 10px;
+  border-radius: 10px;
+}
+.textar input{
+outline: none;
+border: #13e21d;
+}
+.Butt {
+
+  font-size: 0; line-height: 0;
+  scale: 1x;
+}
+
+.Butt:hover {
+  font-size: 10; line-height: 10;
+  transform:scale(8);
+}
+img {
+  height: 200px;
+}
+
+.text {
   color: #42b983;
+}
+.firstcard {
+  color: #e21313;
 }
 </style>
